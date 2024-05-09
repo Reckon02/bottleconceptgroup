@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Selective Focus on Blurry Hero</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <p>Cool Site</p>
+        <button>Sign up</button>
+      </div>
+      <div class="backdrop"></div>
+    </nav>
+    <!-- partial:index.partial.html -->
+    <body id="body">
+      <div class="hero" id="hero">
+        <h1 class="main-title">HYDRABOTTLE</h1>
+        <img
+          class="image1"
+          style="filter: grayscale(100%)"
+          src="https://assets.codepen.io/9051928/retro.png"
+        />
+        <img class="image2" src="https://assets.codepen.io/9051928/retro.png" />
+        <img
+          class="image3"
+          src="https://monos.com/cdn/shop/products/Kiyo-UVC-Bottle-500ml-Blue-Hour_900x.png?v=1678603856"
+          alt=""
+        />
+        <svg xmlns="http://www.w3.org/2000/svg" id="svg-mask">
+          <defs>
+            <filter id="maskBlur">
+              <feGaussianBlur stdDeviation="30" />
+            </filter>
+            <mask id="circleMask">
+              <circle
+                id="circle"
+                r="280"
+                fill="white"
+                filter="url(#maskBlur)"
+              />
+            </mask>
+          </defs>
+        </svg>
+
+        <svg id="svgFilter" style="position: fixed">
+          <filter id="pixelate" x="0" y="0" filterUnits="objectBoundingBox">
+            <feGaussianBlur stdDeviation="20" />
+            <feComponentTransfer>
+              <feFuncA type="discrete" tableValues="1 1" />
+            </feComponentTransfer>
+          </filter>
+        </svg>
+      </div>
+    </body>
+    <!-- partial -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="./script.js"></script>
+
+    <div class="second_part">
+      <h2>helllo</h2>
+      <div class="grid-container">
+        <div class="product">
+          <h2>Product 1</h2>
+          <p>Comprar ara</p>
+        </div>
+        <div class="product">
+          <h2>Product 2</h2>
+          <p>Comprar ara</p>
+        </div>
+        <div class="product">
+          <h2>White</h2>
+          <p>Comprar ara</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
