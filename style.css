@@ -120,6 +120,18 @@ nav {
   font-size: var(--h);
 }
 
+.basket-link {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.basket-link img {
+  width: 40px; /* Adjust the size of the basket icon as needed */
+  height: auto;
+}
+
+
 .backdrop {
   width: 100%;
   height: 100%;
