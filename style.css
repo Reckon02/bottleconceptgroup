@@ -120,6 +120,12 @@ nav {
   font-size: var(--h);
 }
 
+.available-colors {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .basket-link {
   display: flex;
   align-items: center;
@@ -156,28 +162,40 @@ nav {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
-  grid-gap: 0; /* No gap between grid items */
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #ededed; /* Example background color */
+  font-family: "Readex Pro";
 }
 
-.product {
+.box {
+  position: relative;
+}
+
+.box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 10px;
+  left: 1rem;
+  font-size: 16px;
+  font-weight: light;
+}
+.buy-now-text {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  color: #124d71;
+
+  font-size: 16px;
+  font-weight: light;
+}
+.box1 {
   border-right: 1px solid #000000; /* Thin border to separate grid items */
-  background-color: #EDEDED; /* Example background color */
 }
-
-.product:last-child {
-  border-right: none; /* Remove border from the last grid item */
-}
-
-.product  {
-  padding: 10px; /* Padding for the content */
-}
-
-/* Optional: Additional styling for the product content */
-.product > div h2 {
-  margin-top: 0;
-}
-
-.product > div p {
-  margin-bottom: 0;
+.box2 {
+  border-right: 1px solid #000000; /* Thin border to separate grid items */
 }
